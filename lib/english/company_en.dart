@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class CompanyEn extends StatelessWidget {
   const CompanyEn({super.key});
@@ -38,6 +39,14 @@ class CompanyEn extends StatelessWidget {
                   ),
                 ),
               ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/home-En');
+                },
+                child: ListTile(
+                  title: Text("Home"),
+                ),
+              ),
               ListTile(
                 title: Text("Company"),
               ),
@@ -65,12 +74,17 @@ class CompanyEn extends StatelessWidget {
         body: ListView(
           children: [
             const SizedBox(height: 80),
-            Container(
-              alignment: Alignment.centerLeft,
-              margin: const EdgeInsets.only(left: 50),
-              child: Image.asset(
-                'images/iquainc.png',
-                scale: 4,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, "/home-En");
+              },
+              child: Container(
+                alignment: Alignment.centerLeft,
+                margin: const EdgeInsets.only(left: 50),
+                child: Image.asset(
+                  'images/iquainc.png',
+                  scale: 4,
+                ),
               ),
             ),
             const SizedBox(height: 50),
@@ -162,11 +176,16 @@ class CompanyEn extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Container(
-                        margin: const EdgeInsets.only(left: 30),
-                        child: Image.asset(
-                          'images/tuti.png',
-                          width: 90,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/home-En');
+                        },
+                        child: Container(
+                          margin: const EdgeInsets.only(left: 30),
+                          child: Image.asset(
+                            'images/tuti.png',
+                            width: 90,
+                          ),
                         ),
                       ),
                       GestureDetector(

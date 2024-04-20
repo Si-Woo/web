@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatelessWidget {
@@ -639,7 +637,7 @@ class Home extends StatelessWidget {
   }
 
   Future<void> _launchInBrowswer(Uri url) async {
-    if (!await launchUrl(
+    if (await launchUrl(
       url,
       mode: LaunchMode.externalApplication,
     )) {
